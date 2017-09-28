@@ -1,0 +1,12 @@
+@media print {
+
+	#header,
+	.page-header,
+	.purple-section,
+	#footer {
+		display: none !important;
+	}
+
+}
+
+

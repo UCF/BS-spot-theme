@@ -1,0 +1,207 @@
+#fullMap {
+	position: relative;
+	width: 100%;
+	height: 350px;
+
+	#map,
+	#map-side {
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+
+	@media only screen and (min-width: 768px) {
+		height: 494px;
+	}
+
+	.printMap {
+		display: none;
+
+		@media only screen and (min-width: 960px) {
+			position: absolute;
+			display: inline-block;
+			bottom: 40px;
+			right: 40px;
+			z-index: 9;
+			background: @white;
+			.border-radius( 10px );
+			.aktiv-grotesk-bold;
+			color: #777777;
+			font-size: 14px;
+			padding: 18px 20px 17px 50px; 
+			text-decoration: none;
+	  		box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+
+			&:before {
+				.pseudo;
+				left: 20px;
+				background: url(../images/printer-icon.png) no-repeat;
+				width: 20px;
+				height: 18px;
+				top: 50%;
+				margin-top: -9px;
+			}
+		}
+	}
+
+}
+
+#printableMap {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+.logo-container {
+	position: relative;
+	background: @green;
+	height: 110px;
+	width: 100%;
+}
+
+.map-logo {
+	position: relative;
+	background: url(../images/map-logo.png) no-repeat;
+	display: block;
+	width: 110px;
+	height: 90px;
+	margin: 0 auto;
+}
+
+.info-box-wrapper {
+	position: relative;
+	min-height: 230px;
+
+	.body {
+		padding: 15px;
+		width: 100%;
+
+		.address-container {
+			h3,
+			.address {
+				color: #777777;
+				font-size: 16px;
+			}
+
+			h3 {
+				.aktiv-grotesk-bold;
+				margin: 20px 0 0 0;
+			}
+
+			.address {
+				.aktiv-grotesk-reg;
+				margin: 5px 0 0 0;
+				line-height: 1.2em;
+			}
+		}
+	}
+}
+
+.side-map-section {
+	position: relative;
+	background: @purple;
+
+	#map-side {
+		position: relative;
+		width: 100%;
+		height: 400px;
+
+		@media only screen and (min-width: 768px) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 100%;
+		}
+	}
+
+	.info-side {
+		position: relative;
+		padding: 30px 15px;
+		color: @white;
+		max-width: 900px;
+
+		a {
+			color: @white;
+		}
+
+		h3 {
+			.aktiv-grotesk-bold;
+			font-size: 20px;
+
+			@media only screen and (min-width: 960px) {
+				font-size: 24px;
+			}
+		}
+
+		p {
+			.aktiv-grotesk-reg;
+			font-size: 14px;
+			line-height: 1.3em;
+			margin-top: 15px;
+
+			@media only screen and (min-width: 960px) {
+				margin-top: 25px;
+				font-size: 16px;
+				line-height: 1.5em;
+			}
+		}
+
+		ul {
+			list-style: none;
+			margin-top: 20px;
+			margin-bottom: 5px;
+
+			@media only screen and (min-width: 960px) {
+				margin-top: 35px;
+			}
+
+			li {
+				position: relative;
+				padding-left: 8px;
+				display: block;
+				line-height: 1.3em;
+				color: #d1d2eb;
+				font-size: 14px;
+				.aktiv-grotesk-reg;
+				margin-top: 5px;
+
+				@media only screen and (min-width: 960px) {
+					line-height: 1.5em;
+				}
+
+				&:before {
+					.pseudo;
+					background: url(../images/list-dot-purple.png) no-repeat;
+					width: 4px;
+					height: 5px;
+					left: 0;
+					top: 8px;
+				}
+			}
+		}
+
+		@media only screen and (min-width: 768px) {
+			padding: 30px 25px;
+			width: 50%;
+			margin-left: 50%;
+		}
+
+		@media only screen and (min-width: 960px) {
+			padding: 85px 45px;
+		}
+
+		@media only screen and (min-width: 1050px) {
+			padding: 100px 50px;
+		}
+
+		@media only screen and (min-width: 1380px) {
+			padding: 125px 80px;
+		}
+	}
+
+
+}

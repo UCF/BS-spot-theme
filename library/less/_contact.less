@@ -1,0 +1,146 @@
+.contactStuff {
+	position: relative;
+	width: 100%;
+	border-bottom: 1px solid @grey3;
+
+	h1 {
+		.aktiv-grotesk-xbold;
+		font-size: 20px;
+		color: #777777;
+		margin-bottom: 30px;
+
+		@media only screen and (min-width: 1500px) {
+			font-size: 24px;
+			margin-bottom: 60px;
+		}
+	}
+
+	h3 {
+		color: @white;
+		font-size: 20px;
+		.aktiv-grotesk-bold;
+		line-height: 1.3em;
+
+		@media only screen and (min-width: 1500px) {
+			font-size: 24px;
+		}
+	}
+
+	.left-side {
+		background: @purple;
+		width: 100%;
+
+		@media only screen and (min-width: 960px) {
+			width: 34%;
+		}
+	}
+
+	.right-side {
+		padding: 30px 15px;
+		width: 100%;
+
+		@media only screen and (min-width: 960px) {
+			width: 66%;
+			padding: 40px 45px 40px;	
+		}
+
+		@media only screen and (min-width: 1500px) {
+			padding: 60px 90px 85px;	
+		}
+	}
+	
+	.right-side,
+	.left-side {
+		@media only screen and (min-width: 960px) {
+			float: left;
+			height: 100%;
+		}
+	}
+
+	.infoList {
+		position: relative;
+		color: @white;
+
+		li {
+			margin-top: 40px;
+		}
+
+		.title,
+		.infoList-info {
+			font-size: 16px;
+		}
+
+		.title {
+			.aktiv-grotesk-bold;
+		}
+
+		.infoList-info {
+			.aktiv-grotesk-reg;
+			line-height: 1.4em;
+			margin-top: 10px;
+		}
+	}
+
+	.contact-icon {
+		float: left;
+		margin-left: 20px;
+
+		&.first {
+			margin-left: 0;
+		}
+	}
+
+	.top-part,
+	.bottom-part {
+		position: relative;
+		width: 100%;
+		padding: 30px 15px;
+	}
+
+	.top-part {
+		border-bottom: 1px solid @purple-border2;
+
+		@media only screen and (min-width: 960px) {
+			padding: 50px 50px 25px;
+		}
+
+		@media only screen and (min-width: 1500px) {
+			padding: 100px 100px 50px;
+		}
+	}
+
+	.bottom-part {
+		border-top: 1px solid @purple-border2;
+
+		a.btn {
+			margin-top: 40px;
+		}
+
+		@media only screen and (min-width: 960px) {
+			padding: 50px;
+		}
+
+		@media only screen and (min-width: 1500px) {
+			padding: 60px 100px 85px;
+		}
+	}
+
+	.cta-description {
+		position: relative;
+		margin: 35px 0 0 0;
+		max-width: 370px;
+
+		p {
+			.aktiv-grotesk-reg;
+			color: @white;
+			font-size: 14px;
+			line-height: 1.5;
+			margin: 15px 0 0 0;
+
+			&:first-child {
+				margin: 0;
+			}
+		}
+	}
+
+}

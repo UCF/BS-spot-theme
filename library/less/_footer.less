@@ -1,0 +1,76 @@
+#footer {
+	position: absolute;
+	background: @white;
+	height: 140px;
+	border-top: 1px solid @grey3;
+	bottom: 0;
+	width: 100%;
+
+	.footer-up {
+		position: absolute;
+		right: 15px;
+   		top: 50%;
+    	margin-top: -5.5px;
+
+    	@media only screen and (min-width: 960px) {
+    		.transition();
+
+			&:hover {
+				margin-top: -9px;
+			}
+    	}
+	}
+
+	.container {
+		max-width: 1360px;
+
+		.left-side {
+			@media only screen and (min-width: 768px) {
+				float: left;
+				.text-left;
+			}
+		}
+		
+		.right-side {
+			display: none;
+
+			@media only screen and (min-width: 768px) {
+				float: right;
+				display: block;
+			}
+		}
+	}
+	
+	.line1,
+	.line2 {
+		position: relative;
+		color: @grey2;  
+	    .aktiv-grotesk-reg;
+	    font-size: 12px;
+	    line-height: 1.5em;
+
+	    a {
+	    	position: relative;
+	    	color: @grey2;  
+		    .aktiv-grotesk-reg;
+		    font-size: 12px;
+		    margin-left: 28px;
+		    text-decoration: none;
+		    display: inline-block;
+
+		    &:after {
+		    	.pseudo;
+		    	background: #bdbdbd;
+		    	width: 100%;
+		    	height: 1px;
+		    	border-bottom: 1px solid #dedede;
+		    	bottom: -3px;
+		    }
+	    }
+	}
+
+	.line2 {
+		margin-top: 12px;
+	}
+
+}

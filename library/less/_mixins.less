@@ -1,0 +1,277 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Mixins & Constants Stylesheet
+
+This is where you can take advantage of LESS' great features: 
+Mixins & Constants. I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques like box shadow and
+border-radius.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more. 
+
+******************************************************************/
+
+/*********************
+FIX IE7 INLINE-BLOCK
+*********************/
+.fixIE7 {
+	*display:inline;
+	*zoom:1;
+}
+
+/*********************
+CLEARFIXIN'
+*********************/
+
+// Contain floats: nicolasgallagher.com/micro-clearfix-hack/
+.clearfix {
+  zoom: 1;
+	&:before, &:after { content: ""; display: table; }
+	&:after { clear: both; }
+}
+
+/*********************
+TOOLS
+*********************/
+
+* { 
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing:    border-box; 
+	box-sizing:         border-box; 
+}
+
+.outer {
+	display: table;
+	position: relative;
+	height: 100%;
+	width: 100%;
+
+	.inner {
+		display: table-cell;
+		vertical-align: middle;
+		.text-center;
+		position: relative;
+		width: 100%;
+	}
+}
+
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+
+	&.half-overlay--width {
+		width: 50%;
+	}
+
+	&.half-overlay--height {
+		height: 50%;
+	}
+}
+
+.pseudo {
+	position: absolute;
+	content: '';
+	display: block;
+}
+
+.no-padding { padding: 0 !important; }
+.no-margin { margin: 0 !important; }
+.no-margin-top { margin-top: 0 !important; }
+.center-heading {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		.text-center;
+	}
+}
+
+.hide { display: none !important; }
+
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+
+@black: #000;
+@white: #fff;
+@green: #72ac35;
+@green2: #99cc66;
+@purple: #444768;
+@purple-text: #d1d2eb;
+@purple-border: #646783;
+@purple-border2: #555976;
+@grey: #9c9c9c;
+@grey2: #7c7c7c;
+@grey3: #ececec;
+@red: #f45252;
+
+span {
+	&.color-green {
+		color: @green;
+	}
+	
+	&.color-red {
+		color: @red;
+	}
+}
+
+/*********************
+TYPOGRAPHY
+*********************/
+
+@sans-serif:"Helvetica Neue", Helvetica, Arial, sans-serif; 
+@serif:"Georgia", Cambria, Times New Roman, Times, serif; 
+
+/* text alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize !important; }
+.no-letter-spacing { letter-spacing: 0 !important; }
+
+.aktiv-grotesk-reg {
+ 	font-family: "aktiv-grotesk-n4", "aktiv-grotesk", Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.aktiv-grotesk-med {
+ 	font-family: "aktiv-grotesk-n5", "aktiv-grotesk", Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 500;
+}
+
+.aktiv-grotesk-bold {
+ 	font-family: "aktiv-grotesk-n7", "aktiv-grotesk", Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 700;
+}
+
+.aktiv-grotesk-xbold {
+	font-family: "aktiv-grotesk-n8", "aktiv-grotesk", Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 800;
+}
+
+/*********************
+BORDER RADIUS
+*********************/
+
+/* 
+NOTE: For older browser support (and some mobile), 
+don't use the shorthand to define *different* corners. 
+
+USAGE: .border-radius(4px); 
+
+*/
+.border-radius(@radius: 4px) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+/*********************
+BACKGROUND SIZE
+*********************/
+
+/*
+USAGE: .background-size(4px, 4px); 
+*/
+
+.background-size(@xpos: 0, @ypos: 0) {
+  -webkit-background-size: @xpos @ypos;
+     -moz-background-size: @xpos @ypos;
+          background-size: @xpos @ypos;
+}
+
+
+/*********************
+TRANISTIONS
+*********************/
+
+/* .transition(all,2s); */
+.transition(@what: all, @time: 0.2s, @transition: ease-in-out) {
+	-webkit-transition: @what @time @transition;
+	-moz-transition:    @what @time @transition;
+	-ms-transition:     @what @time @transition;
+	-o-transition:      @what @time @transition;
+	transition:         @what @time @transition;
+}
+
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can 
+really slow down your CSS. Don't overdo it.
+*********************/
+
+/* .css-gradient(#dfdfdf,#f8f8f8); */
+.css-gradient(@from: #dfdfdf, @to: #f8f8f8) {
+	background-color: @to;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+	background-image: -webkit-linear-gradient(top, @from, @to);
+	background-image: -moz-linear-gradient(top, @from, @to);
+	background-image: -o-linear-gradient(top, @from, @to);
+	background-image: linear-gradient(to bottom, @from, @to);
+}
+
+/*********************
+BOX SHADOW
+*********************/
+
+/* .boxShadow(0,0,4px,0,#444); */
+.boxShadow(@x: 0, @y: 0, @radius: 4px, @spread: 0, @color: rgba(0,0,0,0.5)) when (isnumber(@x)) {
+	-webkit-box-shadow: @x @y @radius @spread @color;
+	   -moz-box-shadow: @x @y @radius @spread @color;
+			box-shadow: @x @y @radius @spread @color; 
+}
+/* .boxShadow(none); */
+.boxShadow(@x: none) when (iskeyword(@x)) {
+	-webkit-box-shadow: @x;
+	   -moz-box-shadow: @x;
+			box-shadow: @x; 
+}
+
+/*********************
+OPACITY
+*********************/
+.opacity(@o: 0) {
+	-webkit-opacity: @o;
+	-moz-opacity: @o;
+	filter:alpha(opacity=@o);
+	opacity:@o;
+}
+
+/*********************
+PLACEHOLDER
+*********************/
+.placeholder(@c: #fff) {
+	&::-webkit-input-placeholder {
+		color: @c;
+	}
+	
+	&:-moz-placeholder { /* Firefox 18- */
+	   color: @c;  
+	}
+	
+	&::-moz-placeholder {  /* Firefox 19+ */
+	   color: @c;  
+	}
+	
+	&:-ms-input-placeholder {  
+	   color: @c;  
+	}
+}
