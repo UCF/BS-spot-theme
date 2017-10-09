@@ -56,12 +56,6 @@
 
 				<?php } ?>
 
-				<?php if ( get_field( 'help_section_description' ) ) { ?>
-					
-					<?php the_field( 'help_section_description' ); ?>
-
-				<?php } ?>
-
 				<div class="btn-row">
 
 					<a href="<?php echo get_field( 'help_section_link' ); ?>" target="_blank" class="btn green-btn">
@@ -69,6 +63,12 @@
 					</a>
 
 				</div>
+
+				<?php if ( get_field( 'help_section_description' ) ) { ?>
+					
+					<?php the_field( 'help_section_description' ); ?>
+
+				<?php } ?>
 
 			</div>
 
