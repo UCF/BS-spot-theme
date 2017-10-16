@@ -1,24 +1,4 @@
 <section class="newsletter-survey">
-	
-	<div class="left-side">
-		
-		<div class="inner-wrap">
-
-			<div class="cta-title"><?php echo get_option( 'newsletter_form_title', '' ); ?></div>
-
-			<div class="description">
-				<p><?php echo get_option( 'newsletter_form_description', '' ); ?></p>
-			</div>
-
-			<?php gravity_form( 7, false, true, false, null, true, null ); ?>
-
-			<div class="gform_confirmation_message hide">
-				<p>Thanks for signing up!</p>
-			</div>
-
-		</div>
-
-	</div>
 
 	<div class="right-side">
 		<div class="outer">
