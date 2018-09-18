@@ -58,7 +58,7 @@
 							
 							<?php if ( get_field( 'address' ) ) { ?>
 
-								<li class="no-margin-top">
+								<li>
 
 									<div class="title">Address</div>
 
