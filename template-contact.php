@@ -41,6 +41,20 @@
 						</h3> */ ?>
 
 						<ul class="infoList">
+
+							<?php if ( get_field( 'preferred_parking' ) ) { ?>
+
+							<li class="no-margin-top">
+
+								<div class="title">Parking Locations</div>
+
+								<div class="infoList-info">
+									<?php the_field( 'preferred_parking' ); ?>
+								</div>
+
+							</li>
+
+							<?php } ?>
 							
 							<?php if ( get_field( 'address' ) ) { ?>
 
