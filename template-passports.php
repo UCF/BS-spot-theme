@@ -56,14 +56,6 @@
 
 				<?php } ?>
 
-				<div class="btn-row">
-
-					<a href="<?php echo get_field( 'help_section_link' ); ?>" target="_blank" class="btn green-btn">
-						<?php if ( !get_field( 'help_section_link_text' ) ) { echo 'Why You need To Renew Your Passport Immediately'; } else { the_field( 'help_section_link_text' ); } ?>
-					</a>
-
-				</div>
-
 				<?php if ( get_field( 'help_section_description' ) ) { ?>
 					
 					<?php the_field( 'help_section_description' ); ?>
