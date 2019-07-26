@@ -17,7 +17,7 @@
 						<?php } ?>
 
 						<div class="line2">
-							<?php if ( get_field( 'copyright_text' ) ) { the_field( 'copyright_text' ); } else { ?>&copy; 2015 The SPOT @ UCF<?php } ?> <a href="<?php echo get_permalink( 199 ); ?>" class="footer-link">Privacy Policy</a> <a href="<?php echo get_permalink( 44 ); ?>" class="footer-link">Take Our Survey</a>
+							<?php if ( get_field( 'copyright_text' ) ) { the_field( 'copyright_text' ); } else { ?>&copy; 2019 The SPOT @ UCF<?php } ?> <a href="<?php echo get_permalink( 199 ); ?>" class="footer-link">Privacy Policy</a> <a href="<?php echo get_permalink( 44 ); ?>" class="footer-link">Take Our Survey</a>
 						</div>
 
 					</div>
