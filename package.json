@@ -4,8 +4,9 @@
   "description": "Theme for spot.ucf.edu",
   "main": "index.php",
   "dependencies": {
-    "gulp-less-changed": "^1.4.4",
+    "gulp-concat": "^2.6.1",
     "gulp-less": "^4.0.1",
+    "gulp-less-changed": "^1.4.4",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "webpack": "^4.41.2"
