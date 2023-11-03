@@ -6,15 +6,21 @@
 
 		<main class="contact">
 
-			<img id="mapPrint" src="<?php bloginfo('template_directory'); ?>/library/images/print-map.png" alt="Printable Map" class="hide" />
-		
-			<section id="fullMap">
+            <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
+            <section class="page-header" style="background: url(<?php echo $thumb[0]; ?>) no-repeat center center; background-size: cover;">
 
-				<!-- <a class="printMap" href="#">Print Map</a> -->
+                <div class="overlay"></div>
 
-				<div id="map-side"></div>
+                <div class="center">
 
-			</section>
+                    <div class="content-container">
+                        <?php echo apply_filters( 'the_content', $post->post_content ); ?>
+                        <a href="<?php the_field( 'header_sub_link' ); ?>" class="quote-link"><?php the_field( 'header_sub_line' ); ?></a>
+                    </div>
+
+                </div>
+
+            </section>
 
 			<section class="contactStuff">
 
