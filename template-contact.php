@@ -6,6 +6,7 @@
 
 		<main class="contact">
 
+            <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
             <section class="page-header" style="background: url(<?php echo $thumb[0]; ?>) no-repeat center center; background-size: cover;">
 
                 <div class="overlay"></div>
