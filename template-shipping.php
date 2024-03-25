@@ -13,7 +13,7 @@
 					
 				<div class="container">
 					<p><?php the_title(); ?></p>
-					<?php if ( get_field( 'header_sub_line' ) ) { ?>
+					<?php if ( get_field( 'header_sub_line' ) )  { ?>
 						<div class="sub-line"><?php the_field( 'header_sub_line' ); ?></div>
 					<?php } ?>
 				</div>
